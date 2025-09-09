@@ -56,11 +56,23 @@ const Navbar = () => {
 
       <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
         <div className='flex flex-col text-gray-600'>
-          <div onClick={()=>setVisible} className='flex items-center gap-4 p-3'>
+          <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3'>
             <img className='h-4 rotate-180' src={assets.dropdown_icon}/>
             <p>Back</p>
           </div>
         </div>
+        <NavLink onClick={()=>setVisible(false)} to="/" className="flex flex-col items-center gap-1 p-3 border-b border-gray-200">
+          <p>HOME</p>
+        </NavLink>
+        <NavLink onClick={()=>setVisible(false)} to="/collection" className="flex flex-col items-center gap-1 p-3 border-b border-gray-200">
+          <p>COLLECTION</p>
+        </NavLink>
+        <NavLink onClick={()=>setVisible(false)} to="/about" className="flex flex-col items-center gap-1 p-3 border-b border-gray-200">
+          <p>ABOUT</p>
+        </NavLink>
+        <NavLink onClick={()=>setVisible(false)} to="/contact" className="flex flex-col items-center gap-1 p-3 border-b border-gray-200">
+          <p>CONTACT</p>
+        </NavLink>
       </div>  
     </div>
   );
